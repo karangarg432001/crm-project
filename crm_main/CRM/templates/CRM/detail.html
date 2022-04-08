@@ -1,0 +1,32 @@
+{%  extends 'CRM/main_template.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Details</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Detail</th>
+							<th>Category</th>
+							<th>software_id</th>
+						</tr>
+						{% for i detail %}
+                         <tr>
+                             <td>{{detail.name}}</td>
+                             <td>{{detail.category}}</td>
+                             <td>{{detail.software_id}}</td>
+                         </tr>
+                        {% endfor %}
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}

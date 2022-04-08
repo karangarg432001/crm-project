@@ -1,0 +1,47 @@
+
+{% extends 'CRM/main_template.html' %}
+{% block content %}
+{% include 'CRM/main_template.html' %}
+
+<br>
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="total-queries">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Total Queries</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{total_queries}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="Resolved_queries">
+			  	<div class="card-header">
+			  		<h3 class="card-title">{{resolved}}</h3>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title"></h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Pending Queries</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{pending}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>

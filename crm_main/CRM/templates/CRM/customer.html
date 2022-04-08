@@ -29,7 +29,7 @@
 		<div class="card card-body">
 			<h5>Total Queries</h5>
 			<hr>
-			<h1 style="text-align: center;padding: 10px">{{total_query}}</h1>
+			<h1 style="text-align: center;padding: 10px">{{total_queries}}</h1>
 		</div>
 	</div>
 </div>
@@ -64,14 +64,14 @@
 					<th>Update</th>
 					<th>Remove</th>
 				</tr>
-				{% for query in querys %}
+				{% for Query1 in Queries %}
 					<tr>
-						<td>{{query.query_type}}</td>
-						<td>{{query.category}}</td>
-						<td>{{query.raised_date}}</td>
-						<td>{{query.status}}</td>
+						<td>{{Query1.Query_type}}</td>
+						<td>{{Query1.Detail.Category}}</td>
+						<td>{{Query1.date_created}}</td>
+						<td>{{Query1.status}}</td>
 						<td><a class="btn btn-sm btn-info" href="{% url 'update_query' order.id %}">Update</a></td>
-						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_query' order.id %}">Cancel</a></td>
+						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_query' order.id %}">Remove</a></td>
 					</tr>
 				{% endfor %}
 			</table>

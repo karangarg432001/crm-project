@@ -5,12 +5,13 @@ class Customer(models.Model):
     name = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
         return self.name
 
-    def query(self):
+    @property
+    def queries(self):
         query_count = self.query_set.all().count()
         return str(query_count)
 
@@ -33,10 +34,9 @@ class Detail(models.Model):
     Company_name = models.CharField(max_length=200, null=True)
     software_id = models.FloatField(null=True)
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
-    description = models.CharField(max_length=200, null=True)
+    description = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True, null=True)
-    tags = models.ManyToManyField(Remark)
-
+    # tags = models.ManyToManyField(Remark)
     def __str__(self):
         return self.name
 

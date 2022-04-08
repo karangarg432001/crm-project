@@ -16,11 +16,11 @@
 							<th>Category</th>
 							<th>software_id</th>
 						</tr>
-						{% for i detail %}
+						{% for details in detail %}
                          <tr>
-                             <td>{{detail.name}}</td>
-                             <td>{{detail.category}}</td>
-                             <td>{{detail.software_id}}</td>
+                             <td>{{details.name}}</td>
+                             <td>{{details.category}}</td>
+                             <td>{{details.software_id}}</td>
                          </tr>
                         {% endfor %}
 					</table>
